@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="gym.css">
+        <title>FITNESSFREAK</title>
+        <style>
+            
+            li{
+                float: left;
+              }
+            ul{
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333333;
+              }
+             
+           
+             a{
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 15px;
+                text-decoration: none;
+                margin: 0px;
+                cursor: pointer;
+            }
+            #logo{
+                float: right;
+               }
+               #header{
+                text-align: center;
+                font-family:rockwell;
+                color: bisque;
+                margin-bottom: 6px;
+               }
+               body{
+                background-image:url("bg9.jpg") ;
+                background-attachment: fixed;
+                min-height: 500px;
+                background-position: center;
+                background-size: cover;
+            }
+            
+                #GENDER{
+                    margin-bottom: 20px;
+                }
+                .homo{
+                    text-align: center;
+                    display:flex;
+                    margin-top: 30px;
+                }
+                marquee {
+                  text-align: center;
+                  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+                  border: 1px solid rgba(0, 0, 0, .15);
+                  
+                  padding: 10px;
+              }
+              
+
+        </style>
+    </head>
+    <body>
+         <h2 id="header">FITNESS CLUB</h2>
+        <ul>
+            <li><a href="gym.html"><b>HOME</b></a></li>
+            <li><a href="#gallary"><b>GALLARY</b></a></li>
+            <li><a href="#admission"><strong>ADMISSION</strong></a></li>
+            <li><a href="#contact_us"><strong>CONTACT US</strong></a></li>
+            <li><a href="#about"><strong>ABOUT</strong></a></li>
+            <li id="logo"><img src="gymlogo.webp"
+            width="50"
+        height="50"></li>
+        </ul>
+        <marquee direction="left" width="100%" height="500px" behavior="scroll" scrollamount="10" ><div class="homo">
+            <a href="www.facebook.com"><img src="gym2.jpg"
+            width="400"
+            height="200"/> </a>
+            </div>
+          
+        </marquee>
+        <button class="open-button" onclick="openForm()">ADMISSION</button>
+        
+        <div class="form-popup" id="myForm">
+          <form action="registrationform.html" class="form-container">
+            <h1>Admission Form</h1>
+        
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required>
+        
+            <label for="age"><b>Age</b></label>
+            <input type="text" placeholder="Enter your age" name="age" required>
+
+            <label for="address"><b>Address</b></label>
+            <input type="text" placeholder="Enter your address" name="address" required>
+
+            <label for="GENDER"><b>Gender</b></label>
+
+<select name="GENDER" id="GENDER">
+  <option value="MALE">MALE</option>
+  <option value="FEMALE">FEMALE</option>
+  <option value="TRANS">TRANS</option>
+ 
+</select>
+        
+            <button type="submit" class="btn">Register</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+        
+        <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+        </script>
+        
+
+    </body>
+</html>
